@@ -7,6 +7,8 @@ gem 'fog'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'simple_form'
+gem 'haml'
 
 
 gem 'will_paginate'
