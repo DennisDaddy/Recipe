@@ -1,11 +1,11 @@
-= simple_form_for @recipe, html: { multipart: true } do |f| 
-- if @recipe.errors.any?
+= simple_form_for @food, html: { multipart: true } do |f| 
+- if @food.errors.any?
 #errors
 %p
-= @recipe.errors.count
-Prevented this recipe from saving
+= @food.errors.count
+Prevented this food from saving
 %ul
--@recipe.errors.full_messages.each do |msg|
+-@food.errors.full_messages.each do |msg|
 	%li= msg
 	.panel-body
 	= f.input :title, input_html: { class: 'form-control' }

@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-	before_action :find_recipe, only: [:show, :edit, :update, :destroy]
+	before_action :find_food, only: [:show, :edit, :update, :destroy]
   def index
 
   end
@@ -10,22 +10,28 @@ class RecipesController < ApplicationController
   end
 
   def new
-  	@recipe =Recipe.new
+  	@food =Food.new
   	
   end
   def create
-  	@recipe = Recipe.new(recipe_params)
+  	@food = Food.new(food_params)
+    if @food.save
+      redirect_to @food, notice: "Successfully created new recipe"
+    else
+      render 'new'
+      
+    end
   end
 
 private
 
-def recipe_params
-	params.require(:recipe).permit(:title, :description)
+def food_params
+	params.require(:food).permit(:title, :description)
 	
 end
 
-def find_recipe
-	@recipe = Recipe.find(params[:id])
+def find_food
+	@food = Food.find(params[:id])
 	
 end
 
