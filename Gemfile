@@ -6,6 +6,10 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'haml-rails'
+gem 'simple_form'
+gem 'devise'
+gem 'cocoon'
+
 
 
 gem 'will_paginate'
