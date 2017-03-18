@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :find_params, only: [:show, :edit, :update, :destroy]
   def index
   end
 
@@ -25,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+
   end
 
   def destroy
@@ -34,7 +35,7 @@ class PostsController < ApplicationController
   private
 
   def find_params
-    
+     @post = Post.find(params[:id])    
   end
 
   def post_params
