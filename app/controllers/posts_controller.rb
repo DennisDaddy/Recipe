@@ -23,6 +23,13 @@ class PostsController < ApplicationController
   def edit
   end
   def update
+     if @post.update(post_params)
+      redirect_to @post
+    else
+      flash[:alert] = 'There was a problem updating the post'
+      render 'edit'
+      
+    end
     
   end
 
@@ -31,6 +38,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post.destroy
+    redirect_to root_path
   end
 
   private
