@@ -9,6 +9,8 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'cocoon'
+gem "font-awesome-rails"
+gem 'acts_as_votable'
 
 
 
