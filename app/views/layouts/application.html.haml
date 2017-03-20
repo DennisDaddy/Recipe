@@ -7,6 +7,20 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header
+    .wrapper.clearfix
+    #logo= link_to "Motivation", root_path
+    %nav 
+  
+   
+    = link_to "Add new Inspiration", new_post_path, class: "button"
+    
+            
+    = link_to "sign In", new_user_session_path, class: "button"
+
+
+
+
     %p.notice= notice
     %p.notice= notice
 
