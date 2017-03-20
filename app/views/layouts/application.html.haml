@@ -6,7 +6,7 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    
+
   %body
     %header
     .wrapper.clearfix
@@ -14,10 +14,10 @@
       %nav 
   
      
-      = link_to "Add new Inspiration", new_post_path, class: "button" 
+        = link_to "Add new Inspiration", new_post_path, class: "button" 
             
-      = link_to "sign In", new_user_session_path
-      = link_to "sign Up", new_user_registration_path, class: "button"
+        = link_to "sign In", new_user_session_path
+        = link_to "sign Up", new_user_registration_path, class: "button"
 
 
 
